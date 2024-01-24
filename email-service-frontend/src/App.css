@@ -1,6 +1,37 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
+
+.container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  
+}
+
+.container form {
+  padding: 32px 32px;
+  box-shadow: rgba(0, 255, 55, 0.705) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: #242424;
+  color: #fff;
+  border-radius: var(--border-radius-default);
+
+
+}
+.container form .name-form-container{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  
+}
+
+.container .product-details{
+  padding: 24px;
+  background-color: linear-gradient(90deg, rgb(225, 236, 199, 1) 0%, rgba(255,237,247,1) 100%);
+  border-radius: var(--border-radius-default);
+}
+
