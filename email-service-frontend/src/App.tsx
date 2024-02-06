@@ -36,7 +36,7 @@ function App() {
 
           />
         </div>
-        <Spacer height="4"/>
+        <Spacer height="8"/>
 
 
         <PrimaryInput
@@ -47,13 +47,18 @@ function App() {
           placeholder='suporte@exemplo.com'
 
         />
-        <Spacer height="6"/>
+        <Spacer height="8"/>
         <Button colorScheme='green' width="100%" >Enviar</Button>
       </form>
 
+      <Spacer width="6" maxWidth="4"/>
       <div className='product-details'>
+        <h2>Assinatura Mensal</h2>
+        <Spacer height="4"/>
         <p>Você irá pagar</p>
         <span>R$ 250,00</span>
+        <Spacer height="4"/>
+        <p>Regas: containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
       </div>
     </div>
   )

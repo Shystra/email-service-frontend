@@ -16,12 +16,14 @@
 .container form {
   padding: 32px 32px;
   box-shadow: rgba(0, 255, 55, 0.705) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  background-color: #242424;
+  background: rgb(37,37,37);
+  background: radial-gradient(circle, rgba(37,37,37,1) 0%, rgba(2,0,36,0.6699054621848739) 100%);
   color: #fff;
   border-radius: var(--border-radius-default);
-
+  height: 300px;
 
 }
+
 .container form .name-form-container{
   display: flex;
   align-items: center;
@@ -29,9 +31,31 @@
   
 }
 
-.container .product-details{
-  padding: 24px;
-  background-color: linear-gradient(90deg, rgb(225, 236, 199, 1) 0%, rgba(255,237,247,1) 100%);
-  border-radius: var(--border-radius-default);
+.container .product-details h2{
+  text-align: start;
+  font-size: 32px;
+  color: #fff;
+  font-weight: 600;
 }
 
+.container .product-details{
+  padding: 24px;
+  background: rgb(37,37,37);
+  background: radial-gradient(circle, rgba(37,37,37,1) 0%, rgba(2,0,36,0.6699054621848739) 100%);
+  border-radius: var(--border-radius-default);
+  color: #fff;
+
+  height: 300px;
+}
+
+.container .product-details p{
+  color: #c5c3c3;
+  text-align: center;
+  max-width: 300px;
+}
+.container .product-details span{
+  font-weight: 700;
+  font-size: 32px;
+  text-align: start;
+  width: 100%;
+}
