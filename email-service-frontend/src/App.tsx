@@ -4,14 +4,24 @@ import { ChangeEvent, useState } from 'react'
 import './App.css'
 import PrimaryInput from './components/Input/PrimaryInput'
 import { Button, Spacer } from '@chakra-ui/react';
+import { UseIdentityMutation } from './hooks/UseIdentityMutation';
 
 function App() {
+  const { mutate,  } = UseIdentityMutation()
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
   const [secondName, setSecondName] = useState("");
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value)
+  }
+
+  const submit = () => {
+    mutate({
+      email,
+      firstName,
+      secondName: secondName
+    })
   }
 
   return (
@@ -48,7 +58,7 @@ function App() {
 
         />
         <Spacer height="8"/>
-        <Button colorScheme='green' width="100%" >Enviar</Button>
+        <Button colorScheme='green' width="100%" onClick={submit}>Enviar</Button>
       </form>
 
       <Spacer width="6" maxWidth="4"/>
