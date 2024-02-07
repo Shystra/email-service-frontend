@@ -12,9 +12,9 @@ function App() {
   const [firstName, setFirstName] = useState("");
   const [secondName, setSecondName] = useState("");
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setEmail(event.target.value)
-  }
+  // const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+  //   setEmail(event.target.value)
+  // }
 
   const submit = () => {
     mutate({
@@ -30,16 +30,16 @@ function App() {
         <div className='name-form-container'>
 
           <PrimaryInput
-            value={email}
-            onChange={handleChange}
+            value={firstName}
+            onChange={event => setFirstName(event.target.value)}
             name="firstName"
             label="Nome"
             placeholder='Lucas'
 
           />
           <PrimaryInput
-            value={firstName}
-            onChange={handleChange}
+            value={secondName}
+            onChange={event => setSecondName(event.target.value)}
             name="secondName"
             label="Sobrenome"
             placeholder='Souza'
@@ -50,8 +50,8 @@ function App() {
 
 
         <PrimaryInput
-          value={secondName}
-          onChange={handleChange}
+          value={email}
+          onChange={event => setEmail(event.target.value)}
           name="email"
           label="Digite o seu e-mail"
           placeholder='suporte@exemplo.com'
